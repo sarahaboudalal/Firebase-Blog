@@ -19,6 +19,7 @@ body {
   padding: 0%;
   margin: 0%;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden ;
 }
 
 nav {
@@ -202,3 +203,16 @@ textarea {
   overflow-y: auto;
 }
 
+@media only screen and (max-width: 766px){
+  .homePage .post{
+    width: auto;
+    max-height: none;
+  }
+  .cpContainer{
+    width: auto;
+  }
+  nav{
+    flex-direction: column;
+    height: auto;
+  }
+}
