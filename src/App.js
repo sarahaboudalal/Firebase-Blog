@@ -8,7 +8,7 @@ import { useState } from 'react';
 import {auth} from './firebase-config'
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
 
 
 
@@ -35,7 +35,7 @@ function App() {
      </>}
     </nav>
     <Routes>
-    <Route path='/' element={<HomePage/>}/>
+    <Route path='/' element={<HomePage isAuth={isAuth}/>}/>
     <Route path='/createpost' element={<CreatePost isAuth={isAuth}/>}/>
     <Route path='/login' element={<Login setIsAuth={setIsAuth}/>}/>
     </Routes>
